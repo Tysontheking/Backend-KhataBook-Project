@@ -33,12 +33,15 @@
         <% if(files.length > 0){ %> <% files.forEach(function(val){ %>
         <div class="bg-zinc-600 p-10 w-72 px-4 py-3 rounded-md">
           <h1 class="text-white"><%= val %></h1>
-          <div class="flex justify-between items-center mt-2">
+          <div class="flex justify-between items-center mt-2 gap-1">
           <a href="/files/<%= val %>" class="text-blue-500 inline-block "
             >Read More.</a
           >
           <a href="/Edit/<%= val %>" class="text-zinc-400 inline-block "
             >Edit FileName</a
+          >
+          <a href="/delete/<%= val %>" class="text-red-500 inline-block "
+            >Delete</a
           >
         </div>
         </div>

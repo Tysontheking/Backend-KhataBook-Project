@@ -25,6 +25,12 @@ app.get("/files/:filename", (req, res) => {
 app.get("/Edit/:filename", (req, res) => {
   res.render("Edit", { filename: req.params.filename });
 });
+app.get("/delete/:filename", (req, res) => {
+  fs.unlink(`./files/${req.params.filename}`,function(err){
+    if (err) return res.send(err);
+    res.redirect("/");
+  })
+});
 
 app.post("/Edit", (req, res) => {
   fs.rename(
