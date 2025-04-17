@@ -1,4 +1,49 @@
-<!DOCTYPE html>
+// let express = require("express");
+// const path = require("path");
+// let app = express();
+
+// const fs = require("fs");
+
+// app.set("view engine", "ejs");
+// app.use(express.static(path.join(__dirname, "public"))); //add css or js in public folder
+
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
+
+// app.get("/", (req, res) => {
+//   fs.readdir('./files',(err,files)=>{
+//     // console.log(files);
+//     res.render("index", {files:files});
+    
+//   })
+// });
+
+
+// app.post('/create',(req,res)=>{
+//   fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`,req.body.details,function(err){
+//     res.redirect("/")
+//   })
+
+// })
+
+// app.get("/public", (req, res, next) => {
+//   try {
+//     res.send("public page");
+//   } catch (err) {
+//     return next(Error("Something went wrong we don't know"));
+//   }
+// });
+
+// app.use((err, req, res, next) => {
+//   console.log(err.stack);
+//   res.status(500).send("something went wrong");
+// });
+
+// app.listen(3000);
+
+// index
+
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +55,7 @@
   <body>
     <div class="w-full h-screen bg-zinc-900">
       <div class="form p-10 text-white">
-        <form action="/create" method="post">
+        <form action="/create"  method="post">
           <input
             class="block px-5 py-2 w-full rounded-md bg-zinc-600 outline-none"
             type="text"
@@ -33,14 +78,7 @@
         <% if(files.length > 0){ %> <% files.forEach(function(val){ %>
         <div class="bg-zinc-600 p-10 w-72 px-4 py-3 rounded-md">
           <h1 class="text-white"><%= val %></h1>
-          <div class="flex justify-between items-center mt-2">
-          <a href="/files/<%= val %>" class="text-blue-500 inline-block "
-            >Read More.</a
-          >
-          <a href="/Edit/<%= val %>" class="text-zinc-400 inline-block "
-            >Edit FileName</a
-          >
-        </div>
+          <a href="" class="text-blue-500 inline-block mt-2">Read More.</a>
         </div>
         <% }) %> <% }else{ %>
         <h2 class="text-zinc-500">no task yet.</h2>
@@ -49,4 +87,4 @@
     </div>
     <script src="/Javascript/Script1.js"></script>
   </body>
-</html>
+</html> -->
